@@ -1,0 +1,33 @@
+.header {
+  background-color: #233344;
+  padding: 0 1rem;
+  height: 5rem;
+  width: 100%;
+  color: white;
+  color: #fff;
+  font-family: 'PingFangSC-Regular';
+  letter-spacing: 4px;
+  font-size: 1.2rem;
+  line-height: 5rem;
+}
+.header .logo {
+  line-height: 5rem;
+  vertical-align: middle;
+}
+.header .logo .header-img {
+  background-image: url('../../../images/logo.png');
+  display: inline-block;
+  width: 2rem;
+  height: 1.1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: .1rem;
+}
+.header .header-user {
+  padding-right: 20px;
+}
+.header .col {
+  text-align: right;
+  padding-right: 2rem;
+  font-size: .8rem;
+}

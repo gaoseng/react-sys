@@ -1,0 +1,17 @@
+
+
+.flex(@justify-content: center, @align-items: center ) when (iskeyword(@justify-content)), (iskeyword(@align-items)) {
+    display: flex;
+    justify-content: @justify-content;
+    align-items: @align-items;
+}
+.coverScreen(@position: absolute, @backColor: #fff) when (iskeyword(@position)), (iscolor(@backColor)) {
+    position: @position;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: @backColor;
+}
