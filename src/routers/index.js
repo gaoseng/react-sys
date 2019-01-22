@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, HashRouter, Redirect } from 'react-router-dom';
-import {home} from '../app/pages';
+import { homePage } from '../app/pages';
 import { Header, LeftNav } from '../app/components';
 import WorkBenchRoute from './work-bench-route';
+import ManageCenterRoute from './manage-center-route';
 import './configRoute.less';
 
-
-
-
+// console.log(WorkBenchRoute);
 export default class RouterConfig extends Component {
     render() {
+
         return (
-            <div className="root-container">
-                <Header />
-                <main className="root-main">
-                    <LeftNav />
-                    <Router>
+            <Router>
+
+                <div className="root-container">
+                    <Header />
+                    <main className="root-main">
+                        <LeftNav />
+                        
                         <div className="root-pages">
-                            <Route path="/" component={home} />
+                            <Route path="/" component={homePage} />
                             <Switch>
-                                <WorkBenchRoute />
-                                <Redirect to="/"></Redirect>
+                                <ManageCenterRoute path="/manage-center" />
+                                <WorkBenchRoute path="/work-bench"/>  
+                                {/* <Redirect path="/" to="/" /> */}
                             </Switch>
                         </div>
-                    </Router>
-                </main>
-            </div>
+                        
+                    </main>
+                </div>
+            </Router>
         );
     }
 }

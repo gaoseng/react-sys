@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Icon, Button } from 'antd';
 import './leftNav.less';
+import { Link, NavLink } from 'react-router-dom';
 
 const SubMenu = Menu.SubMenu;
 
@@ -40,12 +41,12 @@ export default class LeftNav extends Component {
                 >
                     <SubMenu key="sub1" title={<span><Icon type="edit" style={{ backgroundColor: '#42485B'}} /><span>工作台</span></span>}>
                         <Menu.Item key="5">概览</Menu.Item>
-                        <Menu.Item key="6">图表</Menu.Item>
+                        <Menu.Item key="6"><Link to="/work-bench/echart">图表</Link></Menu.Item>
                         <Menu.Item key="7">编辑器</Menu.Item>
                         <Menu.Item key="8">聊天室</Menu.Item>
                     </SubMenu>
                     <SubMenu key="sub2" title={<span><Icon type="user" style={{ backgroundColor: '#42485B'}} /><span>设置中心</span></span>}>
-                        <Menu.Item key="9">用户管理</Menu.Item>
+                        <Menu.Item key="9"><Link to="/manage-center/userManage">用户管理</Link></Menu.Item>
                         <Menu.Item key="10">角色管理</Menu.Item>
                         <Menu.Item key="11">权限管理</Menu.Item>
                     </SubMenu>

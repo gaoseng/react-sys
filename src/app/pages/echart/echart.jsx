@@ -1,14 +1,44 @@
 import React, { Component } from 'react';
+import echarts from 'echarts';
 
-export class Echart extends Component {
+export default class EchartPage extends Component {
     constructor(props) {
         super(props);
-
+        // console.log('echarts page');
     }
 
+    componentDidMount() {
+        this.initTable();
+    }
+
+    initTable() {
+        const myChart = echarts.init(this.chart);
+
+        
+        // app.title = '环形图';
+
+        let option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            xAxis: {
+                data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+        myChart.setOption(option);
+        // console.log(myChart);
+
+    }
     render() {
         return (
-            <div>Echart</div>
+            <div  ref={c => this.chart = c} style={{ width: 400, height: 400 }}>123</div>
         );
     }
 }

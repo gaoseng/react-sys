@@ -8,4 +8,5 @@
 }
 .root-container .root-main .root-pages {
   flex: 1;
+  padding: .5rem;
 }

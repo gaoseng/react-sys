@@ -12,6 +12,7 @@ import './styles/base.less';
 import configureStore from './middleware/configureStore';
 
  const store = configureStore();
+//  console.log(store);
  store.subscribe( res => {
     //  console.log(store.getState());
  });

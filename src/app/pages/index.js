@@ -1,11 +1,13 @@
 import login from './login/login';
-import home from './home/home';
-import echart from './echart/echart';
+import homePage from './home/home';
+import echartPage from './echart/echart';
+import userManagePage from './user-manage/user-manage';
 
 
-
+console.log(userManagePage);
 export  {
     login,
-    home,
-    echart
+    homePage,
+    echartPage,
+    userManagePage
 };
