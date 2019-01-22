@@ -28,4 +28,12 @@ function mapStateToProps(state,ownProps) {
     // return state;
     return state;
   }
+
+  function A() {
+      this.name = 'gaosen';
+  }
+
+  console.log(A);
+  var a = new A;
+  console.log(a);
   
