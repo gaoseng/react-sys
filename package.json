@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "build": "node build/build.js"
+    "build": "webpack"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -47,6 +47,7 @@
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   }
 }

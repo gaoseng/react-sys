@@ -3,7 +3,7 @@ const path = require('path');
 const utils = require('./utils');
 const config = require('../config');
 const merge = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.base.conf')
+const baseWebpackConfig = require('./webpack.base.conf');
 
 const webpackConfig = merge(baseWebpackConfig, {
     output: {

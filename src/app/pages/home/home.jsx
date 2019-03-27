@@ -36,4 +36,10 @@ function mapStateToProps(state,ownProps) {
   console.log(A);
   var a = new A;
   console.log(a);
+  class Tripple {
+    static tripple(n = 1) {
+      return n * 3;
+    }
+  }
+  console.log( new Tripple);
   
