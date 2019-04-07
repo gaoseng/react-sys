@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-export default class Overview extends Component {
+class EditorPage extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
-        // console.log(this.props);
         return (
-            <h1 >Overview</h1>
+            <div>editor page</div>
         );
-    }     
+    }
 }

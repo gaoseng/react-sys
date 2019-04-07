@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import QueueAnim from 'rc-queue-anim';
 import { Form, Spin, Input, Icon, Button } from 'antd';
 import './login.less';
+import Axios from 'axios';
+import { getLocalStorageItem, setLocolStorageItem} from '../../../config';
 
 
 export default class Login extends Component {
@@ -13,11 +15,18 @@ export default class Login extends Component {
             isCertificates: false,
             show: true,
         };
+        console.log('---------');
+        console.log(props);
     }
 
     handleSubmit = (e) => {
         // console.log(e);
         e.preventDefault();
+        Axios.get('/api').then((res) => {
+            setLocolStorageItem(res.key, res.value );
+            this.props.showPage(true);
+            // console.log('api');
+        });
     }
 
     render() {

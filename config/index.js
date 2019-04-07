@@ -8,7 +8,15 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-
+            proxyTable: {
+                '/api': {
+                  target: 'http://localhost:3000/',
+                  changeOrigin: true,
+                  pathRewrite: {
+                    '^/api': ''
+                  }
+                }
+              },
         },
 
         //webpack-dev-server 基本的一些配置信息

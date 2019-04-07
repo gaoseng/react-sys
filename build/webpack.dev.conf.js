@@ -34,7 +34,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             ? { warnings:false, errors: true}
             : false ,
         publicPath: config.dev.assetsPublicPath,
-        proxy: config.dev.proxyTable,
+        proxy: {
+            '/api': 'http://localhost:3000'
+          },
         quiet: true,
         watchOptions: {
             poll: config.dev.poll

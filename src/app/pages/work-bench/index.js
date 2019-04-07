@@ -1,5 +1,9 @@
-import overview from './overview/overview';
+import Overview from './overview/overview';
+import Chatter from './chatter/chatter';
+import Editor from './editor/editor';
 
 export {
-    overview
+    Overview,
+    Chatter,
+    Editor
 };

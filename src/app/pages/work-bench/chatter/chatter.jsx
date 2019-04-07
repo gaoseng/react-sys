@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Overview extends Component {
+export default class Chatter extends Component {
     constructor(props) {
         super(props);
     }
@@ -8,7 +8,7 @@ export default class Overview extends Component {
     render() {
         // console.log(this.props);
         return (
-            <h1 >Overview</h1>
+            <div>Chatter</div>
         );
     }     
 }

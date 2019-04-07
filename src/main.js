@@ -10,6 +10,7 @@ import './styles/base.less';
 
  import AppRouter from './routers/index';
 import configureStore from './middleware/configureStore';
+import { Login } from './app/pages';
 
  const store = configureStore();
 //  console.log(store);
@@ -18,20 +19,18 @@ import configureStore from './middleware/configureStore';
  });
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        
+    }
+    
     render() {
         return (
-            <div>1223</div>
+            <Provider store={store}>
+                <AppRouter />
+            </Provider>
         );
+        
     }
 }
-ReactDOM.render((
-    <Provider store={store}>
-        <AppRouter />
-    </Provider>
-    
-    
-  ), document.getElementById('root'));
-
-
-
-// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
